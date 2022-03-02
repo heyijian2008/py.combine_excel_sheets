@@ -9,7 +9,7 @@ files = os.listdir(cwd)
 ## Method 1 gets the first sheet of a given file
 df = pd.DataFrame()
 for file in files:
-    if file.endswith('.xlsx'):
+    if file.endswith('.xlsx') or file.endswith('.XLSX'):
         df = df.append(pd.read_excel(file), 
             ignore_index=True,
             #sort = True
